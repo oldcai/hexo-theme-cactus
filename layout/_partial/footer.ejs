@@ -5,6 +5,9 @@
   <div class="footer-right">
     <nav>
       <ul>
+<% if ('index.html' == page.path && theme.beian) { %>
+  <li><a href='http://www.miibeian.gov.cn/'><%= theme.beian %></a></lii>
+<% } %>
         <% for (var i in theme.nav) { %> 
           <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
         <% } %>
